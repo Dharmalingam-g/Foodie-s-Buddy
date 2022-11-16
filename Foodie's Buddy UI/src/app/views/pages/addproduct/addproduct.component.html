@@ -1,0 +1,106 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add product</h3>
+                </div>
+                <div class="panel-body">
+                    <form [formGroup]="productForm">
+                      
+                      <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode">product Name</label>
+                                    <input type="text" formControlName="product" />
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode"> price</label>
+                                    <input type="text" formControlName="price" />
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode"> Stock</label>
+                                    <input type="text" formControlName="stock" />
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode"> Rating</label>
+                                    <input type="text" formControlName="rating" />
+                                </div>
+                            </div>                        
+                        </div>
+                      
+                    
+                   
+                    </form>
+                </div>
+            </div>
+            
+            <br/>
+            <button cButton class="px-8" color="primary" (click)="addproduct()" >
+                Add
+              </button>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="bg-light min-vh-60 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+        <c-col md="8">
+          <c-card-group>
+            <c-card class="p-4">
+              <c-card-body>
+                <form cForm [formGroup]="productForm">
+                  <h1>Add Product</h1>
+                  <!-- <p class="text-medium-emphasis">Sign In to your account</p> -->
+                  <c-input-group class="mb-3">
+                    <!-- <span cInputGroupText>
+                      <svg cIcon name="cilUser"></svg>
+                    </span> -->
+                    <input autoComplete="product" cFormControl placeholder="Product" formControlName="product" />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <input autoComplete="price" cFormControl placeholder="Price" formControlName="price" />
+                </c-input-group>
+                <c-input-group class="mb-3">
+                    <input autoComplete="stock" cFormControl placeholder="Stock" formControlName="stock" />
+                </c-input-group>
+
+                <c-input-group class="mb-3">
+                    <input autoComplete="rating" cFormControl placeholder="Rating" formControlName="rating" />
+                </c-input-group>
+
+                  <c-row>
+                    <c-col xs="6">
+                      
+                      <button cButton type="submit" class="px-4" color="primary" (click)="addproduct()">Add</button>
+                    
+                    </c-col>
+                  </c-row>
+                </form>
+              </c-card-body>
+            </c-card>
+
+          
+          </c-card-group>
+        </c-col>
+      </c-row>
+    </c-container>
+  </div>
+  

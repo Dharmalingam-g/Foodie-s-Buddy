@@ -1,0 +1,46 @@
+<div class="bg-light min-vh-60 d-flex flex-row align-items-center">
+    <c-container>
+        <c-row class="justify-content-center">
+            <c-col md="7">
+                <c-card-group>
+                    <c-card class="p-8">
+                        <c-card-body>
+                            <form cForm (ngSubmit)="onSubmit(f)" #f="ngForm">
+                                <h1> Make an Order</h1>
+
+
+                                <div class="mb-3">
+                                    <label for="product" class="form-lable">Product</label>
+                                    <input [disabled]="true" cFormControl [(ngModel)]="product"
+                                        [ngModelOptions]="{standalone:true}" name="product">
+                                </div>
+
+                                
+                                <div class="mb-3">
+                                    <input type="hidden" cFormControl [(ngModel)]="id" name="product_id">
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="price" class="form-lable">Price</label>
+                                    <input [disabled]="true" cFormControl [(ngModel)]="price"
+                                        [ngModelOptions]="{standalone:true}" name="price">
+                                </div>
+
+                                
+                                <div class="mb-3">
+                                    <label for="quantity" class="form-lable">quantity</label>
+                                    <input type ="text" cFormControl ngModel name="quantity" >
+                                </div>
+
+                                <div class="d-grid gap-2 col-1 mx-auto">
+                                    <button type="submit" class="btn btn-success order()">Update</button>
+                                </div>
+                            </form>
+                        </c-card-body>
+                    </c-card>
+                </c-card-group>
+            </c-col>
+        </c-row>
+    </c-container>
+</div>

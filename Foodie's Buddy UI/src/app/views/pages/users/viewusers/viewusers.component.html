@@ -1,0 +1,44 @@
+<!-- <div *ngFor="let user of users" class="container py-0">
+    <div class="row text-center text-white mb-5">
+  
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow">
+          <li class="list-group-item">
+            <div class="media align-items-lg-center flex-column flex-lg-row p-2">
+              <h5 class="mt-0 font-weight-bold mb-2">{{user.name}}</h5>
+              <div class="d-flex align-items-center justify-content-between mt-1">
+                <h6 class="font-weight-bold my-2">{{user.email}}</h6>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+  </div> -->
+  <div class="col-lg-7 mx-auto">
+    <h1 class="display-4">Users</h1>
+  </div>
+  <div *ngFor="let user of users" class="container py-0">
+    <div class="row text-center text-white mb-5">
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow">
+          <li class="list-group-item">
+            <div class="media align-items-lg-center flex-column flex-lg-row p-2">
+              <h5 class="mt-0 font-weight-bold mb-2">{{user.name}}</h5>
+              <div class="d-flex align-items-center justify-content-between mt-1">
+                <h6 class="font-weight-bold my-2">{{user.email}}</h6>
+                <div><button cButton color="danger" *ngIf="currentActiveRole === 'admin'" (click)="deleteuser(user._id)">Delete</button></div>
+                <div><button cButton color="info" (click)="profile(user._id)" >View</button></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>  
+  </div> 
+  

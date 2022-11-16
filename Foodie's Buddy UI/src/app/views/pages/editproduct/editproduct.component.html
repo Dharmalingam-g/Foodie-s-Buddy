@@ -1,0 +1,53 @@
+<p>editproduct works!</p>
+
+
+<div class = "bg-light min-vh-60 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+          <c-col md="7">
+              <c-card-group>
+                  <c-card class="p-8">
+                      <c-card-body>
+  <form cForm (ngSubmit)="onSubmit(f)" #f="ngForm">
+           <h1> Update Product</h1>
+      <div class="mb-3">
+        <label cLabel for="exampleFormControlInput1">Product</label>
+        <input
+          cFormControl
+          id="product"
+          [(ngModel)]="product"
+          name="product"
+          ngModel
+        />
+      </div>
+      <div class="mb-3">
+        <label cLabel for="exampleFormControlInput1">Price</label>
+        <input
+          cFormControl
+          id="price"
+          [(ngModel)]="price"
+          name="price"
+        />
+    </div>
+    
+      <div class="mb-3">
+        <label cLabel for="exampleFormControlInput1">Stock</label>
+        <input cFormControl id="stock" [(ngModel)]="stock" name="stock" />
+      </div>
+
+      <div class="mb-3">
+        <label cLabel for="exampleFormControlInput1">Rating</label>
+        <input cFormControl id="rating" [(ngModel)]="rating" name="rating" />
+      </div>
+  
+    <div class="d-grid gap-2 col-1 mx-auto">
+      <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </form>
+  </c-card-body>
+  </c-card>
+  </c-card-group>
+  </c-col>
+  </c-row>
+  </c-container>
+</div>  
